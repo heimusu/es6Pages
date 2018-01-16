@@ -35,7 +35,12 @@ module.exports = {
       {
         test: /\.html$/,
         loader: "html-loader"
-      }
+      },
+      {
+        test: /\.(jpg|png)$/,
+        // loaders: 'url-loader'
+        loaders: 'file-loader?name=img/[name].[ext]'
+      },
     ]
   },
   plugins: [
